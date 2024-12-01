@@ -4,6 +4,8 @@
 
 - [Awesome Advent of Code](https://github.com/Bogdanp/awesome-advent-of-code)
 
+Previous Years: https://github.com/AlexHedley/adventofcode (https://alexhedley.github.io/adventofcode)
+
 ---
 
 [![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/csharp/)
@@ -18,18 +20,18 @@
 ```bash
     |     |                   1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2
     |     | 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
-  0 |   0 | ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° | 0
+  9 |   1 | ■ ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° | 1
 ```
 
 Key: \* Both | ■ One | ° None |
 
 | Silver ■ | Gold ⭐ |
 | -------- | ------- |
-| 0        | 0       |
+| 1        | 0       |
 
 ## Solutions
 
-<!-- - [Day 1](day01/README.md) -->
+- [Day 1](day01/README.md)
 <!-- - [Day 2](day02/README.md) -->
 <!-- - [Day 3](day03/README.md) -->
 <!-- - [Day 4](day04/README.md) -->
@@ -71,9 +73,11 @@ The code will likely be bad. :p
 
 `dotnet tool install -g dotnet-script`
 
-- [dotnet-script](https://github.com/dotnet-script/dotnet-script)
+`dotnet tool update dotnet-script -g`
 
-Copy the [day](day/) folder and use.
+- [dotnet-script](https://github.com/dotnet-script/dotnet-script) [1.6.0]
+
+Copy the 📂 [day](day/) folder and use.
 
 ## Running Solutions/Tests
 

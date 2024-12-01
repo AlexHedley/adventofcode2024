@@ -7,15 +7,15 @@
 using static ScriptUnit;
 using FluentAssertions;
 
-return await AddTestsFrom<DayTests>().Execute();
+return await AddTestsFrom<Day1Tests>().Execute();
 
-public class DayTests : IDisposable
+public class Day1Tests : IDisposable
 {
-    public Day day;
+    public Day1 day1;
 
-    public DayTests()
+    public Day1Tests()
     {
-        day = new Day();
+        day1 = new Day1();
     }
 
     public void Dispose() { }
