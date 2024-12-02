@@ -7,15 +7,15 @@
 using static ScriptUnit;
 using FluentAssertions;
 
-return await AddTestsFrom<DayTests>().Execute();
+return await AddTestsFrom<Day2Tests>().Execute();
 
-public class DayTests : IDisposable
+public class Day2Tests : IDisposable
 {
-    public Day day;
+    public Day2 day2;
 
-    public DayTests()
+    public Day2Tests()
     {
-        day = new Day();
+        day2 = new Day2();
     }
 
     public void Dispose() { }
@@ -29,4 +29,20 @@ public class DayTests : IDisposable
     // {
     //     "Ok".Should().NotBe("Ok");
     // }
+
+    // [Arguments()]
+    // public void CheckLevels(List<long> levels)
+    public void CheckLevelsTrue()
+    {
+        var input = new List<long>() { 7, 6, 4, 2, 1 };
+        var result = day2.CheckLevels(input);
+        result.Should().Be(true);
+    }
+
+    public void CheckLevelsFalse()
+    {
+        var input = new List<long>() { 1, 2, 7, 8, 9 };
+        var result = day2.CheckLevels(input);
+        result.Should().Be(false);
+    }
 }
