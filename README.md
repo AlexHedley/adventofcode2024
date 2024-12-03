@@ -20,20 +20,20 @@ Previous Years: https://github.com/AlexHedley/adventofcode (https://alexhedley.g
 ```bash
     |     |                   1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2
     |     | 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
-  3 |  59 | * * ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° | 4
+  3 | 105 | * * ■ ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° ° | 
 ```
 
 Key: \* Both | ■ One | ° None |
 
 | Silver ■ | Gold ⭐ |
 | -------- | ------- |
-| 0        | 2       |
+| 1        | 2       |
 
 ## Solutions
 
 - [Day 1](day01/README.md)
 - [Day 2](day02/README.md)
-<!-- - [Day 3](day03/README.md) -->
+- [Day 3](day03/README.md)
 <!-- - [Day 4](day04/README.md) -->
 <!-- - [Day 5](day05/README.md) -->
 <!-- - [Day 6](day06/README.md) -->
