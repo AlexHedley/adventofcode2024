@@ -84,8 +84,11 @@ public class Day4
         total += diagonals;
 
         // Swap Matrix
+        Utils.Log($"Swapped", logToConsole, logToFile);
         var swappedMatrix = SwapMatrix(lines);
         Utils.PrintMatrix(swappedMatrix, logToConsole, logToFile);
+
+        Utils.Log($"", logToConsole, logToFile);
 
         // Diagonals
         var reversedDiagonals = CheckDiagonals(swappedMatrix);
@@ -98,7 +101,9 @@ public class Day4
     public long CheckDiagonals(string[,] matrix)
     {
         int rowLength = matrix.GetLength(0);
+        int r = rowLength;
         int colLength = matrix.GetLength(1);
+        int c = colLength;
 
         var total = 0L;
 
@@ -108,13 +113,15 @@ public class Day4
         {
             for (int j = 0; j < colLength ; j++)
             {
-                var k = 0+i;
-                var l = 0+j;
+                colLength = i;
+                
+                var k = i;
+                var l = j;
 
                 adjecents.Add(matrix[k, l]);
                 // while (k < rowLength && l < colLength && (k+1 < rowLength && l+1 < colLength))
                 // while (k < rowLength && l < colLength)
-                while (k+1 < rowLength && l+1 < colLength)
+                while (k+1 < r && l+1 < c)
                 {
                     adjecents.Add(matrix[k+1, l+1]);
                     k++;
@@ -132,14 +139,23 @@ public class Day4
                     if (rtol) total += 1;
                     if (ltor) total += 1;
 
-                    if (rtol || ltor) {
+                    // if (rtol || ltor) {
                         Utils.Log($"{joined}", logToConsole, logToFile);
                         Utils.Log($"{rtol} | {ltor}", logToConsole, logToFile);
-                    }
+                    // }
                 }
                 
                 adjecents = new List<string>();
             }
+
+            // rowLength -= (colLength-i);
+            Utils.Log($"colLength{colLength} | r{r} | i{i}", logToConsole, logToFile);
+            colLength = c;
+            Utils.Log($"colLength{colLength} | r{r} | i{i}", logToConsole, logToFile);
+            // [1,0] [1,1] [1,2]
+            // 10 -= 10-1 = 1
+            // 10 -= 10-2 = 2
+            // On next row start from 0 and only go column length - row length
         }        
         
         return total;
