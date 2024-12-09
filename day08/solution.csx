@@ -1,6 +1,6 @@
 #load "../utils/utils.csx"
 
-public class Day
+public class Day8
 {
     bool logToConsole = true;
     bool logToFile = true;
@@ -17,10 +17,10 @@ public class Day
     // }
 }
 
-Utils.Log("-- Day # --", true, true);
+Utils.Log("-- Day 8 --", true, true);
 Utils.Log("-----------", true, true);
 
-var day = new Day();
+var day8 = new Day8();
 
 string fileName = @"input-sample.txt";
 // string fileName = @"input.txt";
@@ -28,11 +28,11 @@ var lines = Utils.GetLines(fileName);
 
 // Part 1
 Utils.Log("Part 1", true, true);
-day.Part1(lines);
+day8.Part1(lines);
 
 // Part 2
 // Utils.Log("Part 2", true, true);
-// day.Part2(lines);
+// day8.Part2(lines);
 
 Console.Beep();
 
