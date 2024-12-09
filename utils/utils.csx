@@ -410,7 +410,7 @@ public static class Utils
         if (toConsole) Console.WriteLine(message);
         Console.ResetColor();
 
-        if (toFile) File.AppendAllLines(@"debug.log", new[] { $"INFO: {message}" });
+        if (toFile) File.AppendAllLines(@"debug.log", new[] { $"WARNING: {message}" });
     }
 
     public static void Error(string message, bool toConsole = false, bool toFile = false)
@@ -420,7 +420,7 @@ public static class Utils
         if (toConsole) Console.WriteLine(message);
         Console.ResetColor();
 
-        if (toFile) File.AppendAllLines(@"debug.log", new[] { message });
+        if (toFile) File.AppendAllLines(@"debug.log", new[] { $"ERROR: {message}" });
     }
 
     #endregion Logging
